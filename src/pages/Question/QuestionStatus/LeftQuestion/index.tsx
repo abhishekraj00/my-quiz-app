@@ -11,7 +11,7 @@ export const LeftQuestion = ({ id, answer }: propData) => {
   return (
     <div
       className="card small_questionBox_status"
-      style={{ backgroundColor: answer ? "red" : "grey" }}
+      style={{ backgroundColor: answer ? "#F55050" : "#DDDDDD" }}
       onClick={() => setCurrentQuestion(viewQuestion(id))}
     >
       {id}

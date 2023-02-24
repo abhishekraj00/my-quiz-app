@@ -93,15 +93,17 @@ const Login: React.FC = () => {
           <option>Hindi</option>
         </select>
       </div>
-      {userData.name && userData.email && userData.phoneNo && (
-        <button
-          type="submit"
-          className="btn btn-dark m-4 pl-4"
-          onClick={handleSubmit}
-        >
-          Start Test
-        </button>
-      )}
+
+      <button
+        type="submit"
+        className="btn btn-dark m-4 pl-4"
+        onClick={handleSubmit}
+        disabled={
+          userData.name && userData.email && userData.phoneNo ? false : true
+        }
+      >
+        Start Test
+      </button>
     </form>
   );
 };

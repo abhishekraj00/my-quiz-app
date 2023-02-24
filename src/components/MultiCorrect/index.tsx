@@ -4,7 +4,7 @@ import { userContext } from "../../pages/home";
 const MultiCorrect = ({ ques_data }: any) => {
   const { questions, setQuestions } = useContext(userContext);
 
-  const { id, question, option, answer2, correct2 } = ques_data;
+  const { id, question, option, answer2, correct2, type } = ques_data;
 
   const handleAnswerChange = (
     event: React.ChangeEvent<HTMLInputElement>,
@@ -18,6 +18,11 @@ const MultiCorrect = ({ ques_data }: any) => {
     });
     setQuestions([...questions]);
   };
+  const reset = () => {
+    questions[id - 1].answer2 = ["", "", "", ""];
+    setQuestions([...questions]);
+  };
+
   useEffect(() => {
     if (getScore(correct2, answer2)) {
       questions[id - 1].answer = "1";
@@ -31,6 +36,9 @@ const MultiCorrect = ({ ques_data }: any) => {
   };
   return (
     <>
+      <span className="p-2 text-center">
+        Question Type: <b>{type}</b>
+      </span>
       <h1 className="card m-4 p-2 question_box_main">{question}</h1>
       <div className="option_box">
         {option.map((ans: string, index: number) => {
@@ -47,6 +55,7 @@ const MultiCorrect = ({ ques_data }: any) => {
           );
         })}
       </div>
+      <button className="btn btn-danger w-25 m-4" onClick={reset}>Clear Selection</button>
     </>
   );
 };

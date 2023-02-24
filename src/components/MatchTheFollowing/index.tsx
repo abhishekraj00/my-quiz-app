@@ -5,7 +5,7 @@ import "./Match.css";
 export const MatchTheFollowing = ({ ques_data }: any) => {
   const { questions, setQuestions } = useContext(userContext);
 
-  const { id, question, option, answer2, correct2 } = ques_data;
+  const { id, question, option, answer2, correct2, type } = ques_data;
   const leftBox: string[] = ["apple", "car", "dog"];
 
   const handleDragStart = (event: React.DragEvent<HTMLDivElement>) => {
@@ -26,7 +26,7 @@ export const MatchTheFollowing = ({ ques_data }: any) => {
         return item;
       }
     });
-    questions[id - 1].answer ="0";
+    questions[id - 1].answer = "0";
     setQuestions([...questions]);
   };
 
@@ -52,29 +52,32 @@ export const MatchTheFollowing = ({ ques_data }: any) => {
 
   return (
     <>
+      <span className="p-2 text-center">
+        Question Type:<b>{type}</b>{" "}
+      </span>
       <h4 className="card p-2 m-2 text-center bg-dark text-light">
         {question}
       </h4>
       {/* question box */}
       <div className="mm_box">
         {/* left box */}
-        <div className="card p-2 m-4">
+        <div className="card p-2 m-2">
           {leftBox.map((item: string, i) => {
             return (
-              <div key={i} className="o_box card p-2 m-2 bg-info">
+              <div key={i} className="o_box card p-2 m-1 bg-info">
                 {item}
               </div>
             );
           })}
         </div>
         {/* right option box */}
-        <div className="card p-2 m-4 pointer">
+        <div className="card p-2 m-2 pointer">
           {answer2.map((item: string, i: string) => {
             return (
               <div
                 key={"opt" + i}
                 id={i}
-                className="o_box card p-2 m-2 bg-info"
+                className="o_box card p-2 m-1 bg-info"
                 draggable={true}
                 onDragStart={handleDragStart}
                 onDragOver={handleDragOver}

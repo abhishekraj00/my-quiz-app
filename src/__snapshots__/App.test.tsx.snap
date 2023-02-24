@@ -1,0 +1,98 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SnapShot Test For Checking ui renders correctly 1`] = `
+<div
+  className="main"
+>
+  <form
+    className="card from_main p-4 "
+  >
+    <h1>
+      Welcome to quiz App
+    </h1>
+    <div
+      className="form-group"
+    >
+      <label
+        htmlFor="username"
+      >
+        User Name
+      </label>
+      <input
+        className="form-control"
+        id="username"
+        name="name"
+        onChange={[Function]}
+        placeholder="Enter your Name"
+        type="text"
+        value=""
+      />
+    </div>
+    <div
+      className="form-group"
+    >
+      <label
+        htmlFor="InputEmail1"
+      >
+        Email address
+      </label>
+      <input
+        className="form-control"
+        id="InputEmail1"
+        name="email"
+        onChange={[Function]}
+        placeholder="Enter your email"
+        type="email"
+      />
+    </div>
+    <div
+      className="form-group"
+    >
+      <label
+        htmlFor="InputPhoneNo"
+      >
+        Phone No
+      </label>
+      <input
+        className="form-control"
+        id="InputPhoneNo"
+        name="phoneNo"
+        onChange={[Function]}
+        placeholder="Enter Phone Number"
+        type="number"
+      />
+    </div>
+    <div
+      className="form-group"
+    >
+      <label
+        htmlFor="Select1"
+      >
+        Select Prefered Language
+      </label>
+      <select
+        className="form-control"
+        defaultValue="Please select your prefered language"
+        id="Select1"
+        name="langauage"
+        onChange={[Function]}
+      >
+        <option>
+          English
+        </option>
+        <option>
+          Hindi
+        </option>
+      </select>
+    </div>
+    <button
+      className="btn btn-dark m-4 pl-4"
+      disabled={true}
+      onClick={[Function]}
+      type="submit"
+    >
+      Start Test
+    </button>
+  </form>
+</div>
+`;
