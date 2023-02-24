@@ -1,0 +1,17 @@
+.score_box {
+  width: 50%;
+  font-size: x-large;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.score_container {
+  margin-top: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  flex-direction: column;
+}

@@ -1,0 +1,15 @@
+.from_main {
+  position: absolute;
+  top: 10%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  
+  width: 30%;
+}
+
+.form-group {
+  text-align: left;
+  padding: 0.2rem;
+  margin-top: 1rem;
+}

@@ -1,0 +1,39 @@
+.left_part {
+  position: absolute;
+  width: 25%;
+  height: 80%;
+  top: 5%;
+  left: 5%;
+}
+.right_part {
+  position: absolute;
+  width: 60%;
+  height: 65%;
+  top: 5%;
+  left: 35%;
+}
+
+.small_questionBox_status {
+  width: 40px;
+  height: 40px;
+  margin: 10px;
+  padding: 10px;
+  cursor: pointer;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.option_box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 5px;
+  margin-left: 50px;
+}
+
+.question_box_main {
+  text-align: left;
+  margin-left: 10px;
+}
